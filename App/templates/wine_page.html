@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wine Quality Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css_file/wine_style.css') }}">
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">🍷 Wine Quality Prediction</h1>
+    <form id="wineForm">
+      <div class="input-group">
+        <label>Fixed Acidity</label>
+        <input type="number" step="any" name="fixed_acidity" required>
+      </div>
+      <div class="input-group">
+        <label>Residual Sugar</label>
+        <input type="number" step="any" name="residual_sugar" required>
+      </div>
+      <div class="input-group">
+        <label>Free Sulfur Dioxide</label>
+        <input type="number" step="any" name="fsd" required>
+      </div>
+      <div class="input-group">
+        <label>Total Sulfur Dioxide</label>
+        <input type="number" step="any" name="tsd" required>
+      </div>
+      <div class="input-group">
+        <label>Alcohol</label>
+        <input type="number" step="any" name="alco" required>
+      </div>
+      <button type="submit">Predict</button>
+    </form>
+    <h3 class="mp_title">Model Prediction</h3>
+    <div class="result" id="result"></div>
+  </div>
+  <script src="{{ url_for('static', filename='js_files/wine_script.js') }}"></script>
+</body>
+</html>

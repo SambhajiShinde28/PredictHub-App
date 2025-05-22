@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome In PredictHub</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css_file/home_style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Welcome to PredictHub</h1>
+    <p class="subtitle">Choose a model to begin</p>
+    <div class="cards">
+      <div class="card" onclick="location.href='{{ url_for('wine.wine_ui') }}'">
+        <h2>🍷 Wine Quality Prediction</h2>
+        <p>Estimate wine quality based on features.</p>
+      </div>
+      <div class="card" onclick="location.href='{{ url_for('house.house_ui') }}'">
+        <h2>🏠 House Price Prediction</h2>
+        <p>Estimate housing prices based on features.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

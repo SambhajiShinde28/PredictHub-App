@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>House Price Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css_file/house_style.css') }}">
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">🏠 House Price Prediction</h1>
+    <form id="houseForm">
+      <div class="input-group">
+        <label>MedInc</label>
+        <input type="number" step="any" name="MedInc" required>
+      </div>
+      <div class="input-group">
+        <label>House Age</label>
+        <input type="number" step="any" name="HouseAge" required>
+      </div>
+      <div class="input-group">
+        <label>Population</label>
+        <input type="number" step="any" name="Population" required>
+      </div>
+      <div class="input-group">
+        <label>AveOccup</label>
+        <input type="number" step="any" name="AveOccup" required>
+      </div>
+      <div class="input-group">
+        <label>AveRooms</label>
+        <input type="number" step="any" name="AveRooms" required>
+      </div>
+      <div class="input-group">
+        <label>Longitude</label>
+        <input type="number" step="any" name="Longitude" required>
+      </div>
+      <button type="submit">Predict</button>
+    </form>
+    <h3 class="mp_title">Model Prediction</h3>
+    <div class="result" id="result"></div>
+  </div>
+  <script src="{{ url_for('static', filename='js_files/house_script.js') }}"></script>
+</body>
+</html>
